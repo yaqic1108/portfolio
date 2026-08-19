@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Pool Navigation System | Your Name</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .project-page { padding-block: 90px 120px; }
+    .project-hero { max-width: 850px; margin-bottom: 60px; }
+    .project-hero h1 { font-size: clamp(3rem, 7vw, 6rem); line-height: .95; letter-spacing: -.06em; margin-bottom: 24px; }
+    .project-meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+    .project-body { display:grid; grid-template-columns: 1fr 2fr; gap:70px; }
+    .project-sidebar { border-top:1px solid var(--line); padding-top:20px; }
+    .project-sidebar p { color:var(--muted); margin-bottom:22px; }
+    .project-section { margin-bottom:55px; }
+    .project-section h2 { font-size:2rem; margin-bottom:14px; }
+    .project-section p, .project-section li { color:var(--muted); }
+    .project-section ul { padding-left:20px; }
+    .project-photo { min-height:360px; background:#ddd; display:grid; place-items:center; margin:20px 0; }
+    .back { display:inline-block; margin-bottom:45px; font-weight:700; }
+    @media(max-width:800px){.project-body{grid-template-columns:1fr;gap:35px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="../index.html">YOUR NAME</a>
+      <a class="text-link" href="../index.html#projects">← Back to projects</a>
+    </nav>
+  </header>
+
+  <main class="project-page container">
+    <a class="back" href="../index.html#projects">← All projects</a>
+
+    <div class="project-hero">
+      <p class="eyebrow">PROJECT 01 • AUTONOMOUS SYSTEM</p>
+      <h1>Smart Pool Navigation System</h1>
+      <p class="hero-text">
+        An autonomous boat designed and built to navigate a pool using visual markers,
+        onboard sensors, and a custom control system.
+      </p>
+      <div class="project-meta">
+        <span class="tags"><span>SolidWorks</span></span>
+        <span class="tags"><span>3D Printing</span></span>
+        <span class="tags"><span>ESP32</span></span>
+        <span class="tags"><span>IMU</span></span>
+      </div>
+    </div>
+
+    <div class="project-body">
+      <aside class="project-sidebar">
+        <p><strong>My role</strong><br>Mechanical design, fabrication, electronics integration, and navigation logic.</p>
+        <p><strong>Tools</strong><br>SolidWorks · ESP32 · IMU · OLED · ArUco · 3D printing</p>
+        <p><strong>Timeline</strong><br>January 2025 — May 2025</p>
+      </aside>
+
+      <div>
+        <section class="project-section">
+          <h2>The Problem</h2>
+          <p>
+            The goal was to create a small autonomous boat capable of navigating a pool
+            without direct manual control. The system needed to combine mechanical design,
+            electronics, sensing, and control logic into one working prototype.
+          </p>
+        </section>
+
+        <section class="project-section">
+          <h2>My Approach</h2>
+          <p>
+            I designed and modeled mechanical components in SolidWorks, fabricated parts
+            using 3D printing, and integrated the mechanical system with an ESP32,
+            motor controller, IMU, OLED display, and power system.
+          </p>
+          <div class="project-photo"><span>ADD CAD / PROTOTYPE PHOTO HERE</span></div>
+        </section>
+
+        <section class="project-section">
+          <h2>Navigation & Controls</h2>
+          <p>
+            The navigation system used ArUco tags for visual positioning and IMU heading
+            data to determine orientation. A finite-state machine organized the boat's
+            behavior into distinct navigation states.
+          </p>
+        </section>
+
+        <section class="project-section">
+          <h2>Design Iteration</h2>
+          <p>
+            Add your best example of an iteration here: what failed, what you changed,
+            and why the new design worked better. This is one of the most valuable parts
+            of a student engineering portfolio.
+          </p>
+          <div class="project-photo"><span>ADD ITERATION / TESTING PHOTO HERE</span></div>
+        </section>
+
+        <section class="project-section">
+          <h2>Result</h2>
+          <p>
+            Add the measurable outcome here. For example: navigation accuracy, successful
+            completion rate, operating time, weight, dimensions, or another meaningful
+            performance metric.
+          </p>
+        </section>
+
+        <section class="project-section">
+          <h2>What I Learned</h2>
+          <p>
+            Briefly explain one or two engineering lessons from the project—especially
+            something that changed how you approach design, testing, or troubleshooting.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
