@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mechanical engineering portfolio showcasing design, prototyping, and engineering projects.">
-  <title>Your Name | Mechanical Engineering Portfolio</title>
+  <meta name="description" content="Engineering portfolio showcasing design, prototyping, and engineering projects.">
+  <title>Ya Qi Chew | Mechanical Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="logo" href="#home">YOUR NAME</a>
-      <div class="nav-links">
+      <a class="logo" href="#home">Ya Qi Chew</a>
+      <div class="nav-links" id="site-navigation">
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
+        <a href="projects.html">All projects</a>
         <a class="nav-resume" href="resume.pdf" target="_blank">Resume ↗</a>
       </div>
-      <button class="menu-button" aria-label="Open menu">☰</button>
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation">☰</button>
     </nav>
   </header>
 
@@ -36,11 +37,9 @@
           <a class="button secondary" href="resume.pdf" target="_blank">View resume ↗</a>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="hero-card-label">CURRENT FOCUS</div>
-        <h2>Mechanical Design<br>& Engineering Systems</h2>
-        <div class="hero-card-line"></div>
-        <p>CAD · Prototyping · Fabrication · Testing · Problem Solving</p>
+      <div class="hero-photo">
+        <img src="Pictures/YaQiChew-2.jpg" alt="Portrait of Ya Qi Chew">
+        <p class="hero-photo-caption">YA QI CHEW / MECHANICAL ENGINEERING</p>
       </div>
     </section>
 
@@ -53,10 +52,15 @@
         <p class="section-intro">A few projects that show how I approach engineering problems—from concept to physical prototype.</p>
       </div>
 
+      <a class="text-link project-archive-link" href="projects.html">Browse all projects →</a>
+
       <div class="project-grid">
         <article class="project-card featured">
-          <div class="project-image placeholder">
-            <span>PROJECT IMAGE</span>
+          <div class="project-image schematic schematic-boat" role="img" aria-label="Schematic illustration of the autonomous boat project">
+            <span class="schematic-label">AUTONOMOUS VESSEL / 01</span>
+            <span class="schematic-shape"></span>
+            <span class="schematic-line line-one"></span>
+            <span class="schematic-line line-two"></span>
           </div>
           <div class="project-content">
             <p class="project-number">01</p>
@@ -73,8 +77,11 @@
         </article>
 
         <article class="project-card">
-          <div class="project-image placeholder">
-            <span>PROJECT IMAGE</span>
+          <div class="project-image schematic schematic-playground" role="img" aria-label="Schematic illustration of playground structural design">
+            <span class="schematic-label">LOAD PATH / 02</span>
+            <span class="schematic-shape"></span>
+            <span class="schematic-line line-one"></span>
+            <span class="schematic-line line-two"></span>
           </div>
           <div class="project-content">
             <p class="project-number">02</p>
@@ -91,13 +98,16 @@
         </article>
 
         <article class="project-card">
-          <div class="project-image placeholder">
-            <span>PROJECT IMAGE</span>
+          <div class="project-image schematic schematic-next" role="img" aria-label="Abstract engineering schematic for a future project">
+            <span class="schematic-label">IN DEVELOPMENT / 03</span>
+            <span class="schematic-shape"></span>
+            <span class="schematic-line line-one"></span>
+            <span class="schematic-line line-two"></span>
           </div>
           <div class="project-content">
             <p class="project-number">03</p>
-            <h3>Project Three</h3>
-            <p>Replace this with another strong engineering, fabrication, robotics, or product-design project.</p>
+            <h3>Next build</h3>
+            <p>A space for the next engineering project, from early concept sketches through testing and refinement.</p>
             <div class="tags">
               <span>CAD</span><span>Fabrication</span><span>Testing</span>
             </div>
@@ -118,10 +128,10 @@
 
         <div class="experience-list">
           <article class="experience-item">
-            <div class="experience-date">2026 — PRESENT</div>
+            <div class="experience-date">Jun 2026 - Aug 2026</div>
             <div>
               <h3>Hunter Roberts Construction Group</h3>
-              <p class="role">Field Engineering Intern</p>
+              <p class="role">Operation Intern</p>
               <ul>
                 <li>Contributed to monthly owner reports, including financial updates, progress documentation, and key project events.</li>
                 <li>Supported RFI and submittal workflows by coordinating documentation with subcontractors.</li>
@@ -131,11 +141,28 @@
           </article>
 
           <article class="experience-item">
-            <div class="experience-date">PREVIOUS</div>
+            <div class="experience-date">Jan 2026 - May 2026</div>
             <div>
               <h3>New Line Structures</h3>
               <p class="role">Project Engineering Intern</p>
-              <p>Add 2–3 concise bullets describing your responsibilities and accomplishments here.</p>
+              <ul>
+                <li>Performed detailed research and quantity calculations for structural and civil scopes across multiple active and pre-bid projects.</li>
+                <li>Conducted site visits to document and report construction progress, coordinating field observations with the project team.</li>
+                <li>Maintained accurate documentation of engineering drawings and specifications for active projects.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-date">Jan 2026 - May 2026</div>
+            <div>
+              <h3>Stevens Institute of Technology</h3>
+              <p class="role">Research Assistant</p>
+              <ul>
+                <li>Analyzed and implemented mechanical design optimizations using Solidworks, resulting in improved accuracy and precision.</li>
+                <li>Integrated torque sensor to enhance position measurement accuracy for improved experimental data reliability.</li>
+                <li>Collaborated with a research partner on the robotic surgical continuum instrument project to better understand the inner mechanics.</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -188,7 +215,7 @@
             hands-on projects that let me work across design, fabrication, coordination,
             and testing.
           </p>
-          <a class="text-link" href="mailto:your.email@example.com">Let's connect →</a>
+          <a class="text-link" href="contact.html">Let's connect →</a>
         </div>
       </div>
     </section>
@@ -196,10 +223,10 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© 2026 Your Name</p>
+      <p>© 2026 Ya Qi Chew</p>
       <div>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="mailto:your.email@example.com">Email ↗</a>
+        <a href="https://www.linkedin.com/in/yaqichew" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="contact.html">Contact ↗</a>
       </div>
     </div>
   </footer>
