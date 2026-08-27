@@ -39,8 +39,12 @@ document.querySelectorAll("[data-carousel]").forEach(carousel => {
 
   const showImage = step => {
     images[activeIndex].classList.remove("is-active");
+    images[activeIndex].hidden = true;
+    images[activeIndex].style.display = "none";
     activeIndex = (activeIndex + step + images.length) % images.length;
     images[activeIndex].classList.add("is-active");
+    images[activeIndex].hidden = false;
+    images[activeIndex].style.display = "";
     if (count) count.textContent = `${activeIndex + 1} / ${images.length}`;
   };
 

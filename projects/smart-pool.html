@@ -26,7 +26,7 @@
 <body>
   <header class="site-header">
     <nav class="nav container">
-      <a class="logo" href="../index.html">Ya Qi Chew</a>
+      <a class="logo" href="../index.html">YA QI CHEW</a>
       <a class="text-link" href="../projects.html">← All projects</a>
     </nav>
   </header>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="project-hero-photo">
-        <img src="../Pictures/smartpool.png" alt="Smart Pool Navigation System">
+        <img src="../Pictures/smartpool/smartpool0.png" alt="Smart Pool Navigation System">
       </div>
     </div>
 
@@ -79,17 +79,8 @@
             motor controller, IMU, OLED display, and power system.
           </p>
           <div class="project-photo">
-              <img src="../Pictures/smartpoolcad.png" alt="Smart Pool Navigation System CAD design">
+              <img src="../Pictures/smartpool/smartpoolcad.png" alt="Smart Pool Navigation System CAD design">
           </div>
-        </section>
-
-        <section class="project-section">
-          <h2>Navigation & Controls</h2>
-          <p>
-            The navigation system used ArUco tags for visual positioning and IMU heading
-            data to determine orientation. A finite-state machine organized the boat's
-            behavior into distinct navigation states.
-          </p>
         </section>
 
         <section class="project-section">
@@ -99,29 +90,51 @@
             weight distribution, and sensor placement to improve stability and navigation accuracy.
           </p>
           <div class="project-photo project-photo-iteration">
-              <img src="../Pictures/smartpooldesigniteration.png" alt="Smart Pool Navigation System CAD design">
+              <img src="../Pictures/smartpool/smartpooldesigniteration.png" alt="Smart Pool Navigation System CAD design">
           </div>
           <ul>
             <li><strong>Design 1 - </strong>lacked space for the electronics, high center of gravity, instability </li>
             <li><strong>Design 2 - </strong>increased in space for better electronic placement, hull shape caused drag and reduced speed. </li>
           </ul>
+          <div class="project-photo project-photo-iteration">
+              <img src="../Pictures/smartpool/smartpooldesign3.png" alt="Smart Pool Navigation System CAD design">
+          </div>
+          <p>
+            <strong>Final Design - </strong>optimized hull shape for speed and stability, electronics placed lower for better balance, and overall improved performance in navigation tests.
+          </p>
+          <div class="project-photo project-photo-iteration">
+              <img src="../Pictures/smartpool/smartpoolfinal.png" alt="Smart Pool Navigation System CAD design">
+          </div>
+          <p>
+            In the final design, the electronics were designed to be placed in two stacks, with heavier electronics 
+            on the lower level. This design allowed for a lower center of gravity, which improved stability and navigation accuracy, but it also increased organization. 
+          </p>
+        </section>
+
+        <section class="project-section">
+          <h2>Navigation & Controls</h2>
+          <p>
+            The navigation system used ArUco tags for visual positioning and IMU heading
+            data to determine orientation. A finite-state machine organized the boat's
+            behavior into distinct navigation states.
+
+          </p>
+          <img src="../Pictures/smartpool/smartpoolelectronicmap.png" alt="Smart Pool Navigation System navigation logic">
         </section>
 
         <section class="project-section">
           <h2>Result</h2>
           <p>
-            Add the measurable outcome here. For example: navigation accuracy, successful
-            completion rate, operating time, weight, dimensions, or another meaningful
-            performance metric.
+              The autonomous boat successfully navigated the pool using visual markers and IMU data. 
+              The system demonstrated reliable performance, with the boat accurately following the 
+              intended path and responding to environmental changes.
           </p>
-        </section>
-
-        <section class="project-section">
-          <h2>What I Learned</h2>
-          <p>
-            Briefly explain one or two engineering lessons from the project—especially
-            something that changed how you approach design, testing, or troubleshooting.
-          </p>
+          <div class="project-video">
+            <video controls preload="metadata" playsinline>
+              <source src="../Video/smartpoolvideo.mp4" type="video/mp4">
+              Your browser does not support video playback. <a href="../Video/smartpoolvideo.mp4" download>Download the video</a>.
+            </video>
+          </div>
         </section>
       </div>
     </div>
