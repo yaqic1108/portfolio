@@ -29,3 +29,21 @@ contactForm?.addEventListener("submit", event => {
 
   window.location.href = `mailto:yaqichew@gmail.com?subject=${subject}&body=${body}`;
 });
+
+document.querySelectorAll("[data-carousel]").forEach(carousel => {
+  const images = [...carousel.querySelectorAll(".project-carousel-image")];
+  const previousButton = carousel.querySelector("[data-carousel-previous]");
+  const nextButton = carousel.querySelector("[data-carousel-next]");
+  const count = carousel.querySelector("[data-carousel-count]");
+  let activeIndex = 0;
+
+  const showImage = step => {
+    images[activeIndex].classList.remove("is-active");
+    activeIndex = (activeIndex + step + images.length) % images.length;
+    images[activeIndex].classList.add("is-active");
+    if (count) count.textContent = `${activeIndex + 1} / ${images.length}`;
+  };
+
+  previousButton?.addEventListener("click", () => showImage(-1));
+  nextButton?.addEventListener("click", () => showImage(1));
+});
