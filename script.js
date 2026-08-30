@@ -17,18 +17,35 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 const contactForm = document.querySelector(".contact-form");
 
-contactForm?.addEventListener("submit", event => {
-  event.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  const formData = new FormData(contactForm);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
-  const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const nameInput = document.querySelector("#name");
+    const emailInput = document.querySelector("#email");
+    const messageInput = document.querySelector("#message");
 
-  window.location.href = `mailto:yaqichew@gmail.com?subject=${subject}&body=${body}`;
-});
+    const name = nameInput?.value || "";
+    const email = emailInput?.value || "";
+    const message = messageInput?.value || "";
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields before sending.");
+      return;
+    }
+
+    // Format the message for email
+    const emailContent = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    
+    // Try to copy to clipboard
+    navigator.clipboard.writeText(emailContent).then(() => {
+      alert(`Email content copied to clipboard!\n\nSend to: yaqichew@gmail.com\nSubject: Portfolio inquiry from ${name}\n\nYour message:\n${emailContent}`);
+    }).catch(err => {
+      // Fallback if clipboard fails
+      alert(`Your message:\n\nTo: yaqichew@gmail.com\nSubject: Portfolio inquiry from ${name}\n\n${emailContent}`);
+    });
+  });
+}
 
 document.querySelectorAll("[data-carousel]").forEach(carousel => {
   const images = [...carousel.querySelectorAll(".project-carousel-image")];
@@ -51,3 +68,11 @@ document.querySelectorAll("[data-carousel]").forEach(carousel => {
   previousButton?.addEventListener("click", () => showImage(-1));
   nextButton?.addEventListener("click", () => showImage(1));
 });
+
+// Research Poster PDF Handler
+const expandPosterBtn = document.getElementById("expandPosterBtn");
+
+expandPosterBtn?.addEventListener("click", () => {
+  window.open("../Files/surgicalinstrumentposter.pdf", "_blank", "noopener,noreferrer");
+});
+
