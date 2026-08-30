@@ -15,38 +15,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   });
 });
 
-const contactForm = document.querySelector(".contact-form");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const nameInput = document.querySelector("#name");
-    const emailInput = document.querySelector("#email");
-    const messageInput = document.querySelector("#message");
-
-    const name = nameInput?.value || "";
-    const email = emailInput?.value || "";
-    const message = messageInput?.value || "";
-
-    if (!name || !email || !message) {
-      alert("Please fill in all fields before sending.");
-      return;
-    }
-
-    // Format the message for email
-    const emailContent = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    
-    // Try to copy to clipboard
-    navigator.clipboard.writeText(emailContent).then(() => {
-      alert(`Email content copied to clipboard!\n\nSend to: yaqichew@gmail.com\nSubject: Portfolio inquiry from ${name}\n\nYour message:\n${emailContent}`);
-    }).catch(err => {
-      // Fallback if clipboard fails
-      alert(`Your message:\n\nTo: yaqichew@gmail.com\nSubject: Portfolio inquiry from ${name}\n\n${emailContent}`);
-    });
-  });
-}
-
+// Contact form is handled by FormSubmit.co service
 document.querySelectorAll("[data-carousel]").forEach(carousel => {
   const images = [...carousel.querySelectorAll(".project-carousel-image")];
   const previousButton = carousel.querySelector("[data-carousel-previous]");
