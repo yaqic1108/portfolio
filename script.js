@@ -52,6 +52,25 @@ if (contactForm) {
   });
 }
 
+document.querySelectorAll("video").forEach(video => {
+  const fallback = video.parentElement?.querySelector(".video-fallback");
+
+  if (!fallback) return;
+
+  const syncFallbackState = () => {
+    const hasSource = video.currentSrc || [...video.querySelectorAll("source")].some(source => source.src);
+    const failed = !hasSource || !!video.error;
+
+    fallback.hidden = !failed;
+    video.style.display = failed ? "none" : "block";
+  };
+
+  video.addEventListener("loadeddata", syncFallbackState);
+  video.addEventListener("canplay", syncFallbackState);
+  video.addEventListener("error", syncFallbackState);
+  syncFallbackState();
+});
+
 document.querySelectorAll("[data-carousel]").forEach(carousel => {
   const images = [...carousel.querySelectorAll(".project-carousel-image")];
   const previousButton = carousel.querySelector("[data-carousel-previous]");
