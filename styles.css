@@ -194,6 +194,7 @@ a { color: inherit; text-decoration: none; }
 .project-number { font-family: "DM Mono", monospace; font-size: .72rem; color: var(--accent); margin-bottom: 12px; }
 .project-content h3 { font-size: 1.7rem; line-height: 1.15; margin-bottom: 12px; letter-spacing: -.03em; }
 .project-content p { color: var(--muted); }
+.project-content > div { margin-top: 16px; margin-bottom: 16px; }
 .project-meta {
   display: flex;
   flex-wrap: nowrap;
@@ -211,13 +212,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 20px 0;
-}
-
-.tags span {
   display: inline-block;
   padding: 6px 12px;
   background: rgba(157, 102, 56, 0.12);
@@ -228,9 +222,10 @@ a { color: inherit; text-decoration: none; }
   color: var(--text);
   white-space: nowrap;
   transition: all .2s ease;
+  margin-right: 8px;
 }
 
-.tags span:hover {
+.tags:hover {
   background: rgba(157, 102, 56, 0.2);
   border-color: var(--text);
   transform: translateY(-1px);
